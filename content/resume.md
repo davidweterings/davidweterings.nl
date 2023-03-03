@@ -143,6 +143,8 @@ modules, optimizing legacy code and connecting external systems.
 
 # Details
 
+I live in Utrecht, Netherlands.
+
 * Nationality: Netherlands
 * Languages: Dutch, English
 * Date of birth: 6th of December, 1987

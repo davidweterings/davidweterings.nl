@@ -34,8 +34,8 @@ dateformat = "Jan 1, 2023"
 
 ## Site Meta Settings
 [params.meta]
-description = "Simple minimalist theme"
-keywords = "david weterings,freelance,developer"
+description = "Freelance senior software developer David Weterings"
+keywords = "david weterings,freelance,ZZP,web development,backend development"
 
 ## Social Accounts
 [params.social]

@@ -1,0 +1,62 @@
+## Basic Configuration
+
+baseurl = "davidweterings.nl"
+builddrafts = false
+canonifyurls = false
+languageCode = "en-GB"
+
+contentdir = "content"
+layoutdir = "layouts"
+publishdir = "public"
+
+author = "David Weterings"
+title = "David Weterings"
+
+theme = "hugo-goa"
+
+## Hugo Built-in Features
+disqusShortname = "" # Comment out to disable Disqus.
+googleAnalytics = ""
+enableRobotsTXT = true
+
+## Site Settings
+[params]
+author = "David Weterings"
+intro = ""
+description = """
+Freelance senior software consultant and developer. Focus on e-commerce, Terraform, Cloud.
+
+KvK: 71557733 Btw: NL001562249B79
+"""
+authorimage = "headshot.jpg"
+dateformat = "Jan 1, 2023"
+
+## Site Meta Settings
+[params.meta]
+description = "Simple minimalist theme"
+keywords = "david weterings,freelance,developer"
+
+## Social Accounts
+[params.social]
+github = "davidweterings"
+linkedin = "davidweterings"
+twitter = "davidweterings"
+stackoverflow = ""
+email = "david@davidweterings.nl"
+
+## Extras
+[params.extra]
+copyright = "© 2023. David Weterings. [Some Rights Reserved](https://creativecommons.org/licenses/by/3.0/)."
+poweredby = false
+highlightjs = true
+socialmarkup = true
+toc = true
+displayrssicon = false
+
+## Main Menu
+[[menu.main]]
+    name = "Resume"
+    identifier = "resume"
+    weight = 200
+    url = "/resume/"
+

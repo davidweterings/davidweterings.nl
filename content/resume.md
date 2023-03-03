@@ -23,35 +23,91 @@ Under LabDigital I worked on various subprojects.
 
 Working on new e-commerce trading websites using Next.JS, Vercel, Apollo GraphQL, TypeScript, AWS, Terraform, Commercetools.
 
-Later switched to help another team using Kafka, MongoDB, C#, .NET Core, AWS, Terraform to develop a new service layer.
+Later switched to help another team develop a new data service layer using Kafka, MongoDB and C#.
+
+Technologies:
+
+* AWS
+* C#
+* Kafka
+* MongoDB
+* Terraform
+* Commercetools
+* Vercel (Next.JS)
+* Apollo GraphQL
+* TypeScript
 
 #### Knives & Tools - Fullstack developer (2021)
 
-Worked on the e-commerce websites for Knives & Tools using Next.JS, 
-GraphQL, TypeScript, AWS, AWS Lambda, Terraform, Commercetools.
+Worked on the e-commerce websites for [Knives & Tools](https://knivesandtools.nl).
+
+Technologies:
+
+* Next.JS, 
+* GraphQL
+* TypeScript
+* Python
+* AWS
+* Terraform
+* Commercetools
+
+#### Thuisapotheek.nl (2022–2023)
+
+Assisted on the initial development of [ThuisApotheek](https://thuisapotheek.nl). Wrote the integration with PostNL.
+
+Technologies:
+
+* Django
+* AWS
 
 #### Marketplace e-commerce - Fullstack developer (2021)
 
-Worked on a new e-commerce integration for a global, niche marketplace using Kubernetes, AWS, Next.JS,
-GraphQL, TypeScript.
+Worked on a new e-commerce integration for a global, niche marketplace.
+
+Technologies:
+* Kubernetes
+* Next.JS
+* GraphQL
+* TypeScript
+* AWS
 
 #### Glen Dimplex e-commerce - Lead developer (2021)
 
 Worked on a headless e-commerce project to integrate e-commerce in various Glen Dimplex websites
-across the globe using Commercetools, Azure, Azure functions, Terraform, Python, Node.js and a React frontend.
+across the globe.
+
+Technologies:
+* Azure (focus on Azure functions)
+* Terraform
+* Python
+* Node.js / TypeScript
+* React
+* Commercetools
 
 #### Danone e-commerce - Fullstack developer (2018 - 2021)
 
 Worked on a headless e-commerce project to integrate e-commerce in various Danone
-websites across the globe using Commercetools, AWS, AWS Lambda, Python and a React frontend.
+websites across the globe.
 
 Helped develop various open-source custom Terraform providers written in Go.
+
+Technologies:
+* AWS (focus on using AWS Lambda)
+* Terraform
+* Go
+* Python
+* Node.js / TypeScript
+* React
+* Commercetools
 
 ### University of Maastricht (2018)
 
 Consult on consolidating the infrastructure of several project (f.e. grants)
-websites. Implement/design custom websites for several of their projects using Django and
-Wagtail.
+websites. Implement/design custom websites for several of their projects.
+
+Technologies:
+
+* Django (WagTail CMS)
 
 ### Developers.nl - Senior developer & Python lead (2013-2018)
 

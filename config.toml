@@ -3,14 +3,14 @@
 baseurl = "https://davidweterings.nl"
 builddrafts = false
 canonifyurls = false
-languageCode = "en-GB"
+languageCode = "en"
 
 contentdir = "content"
 layoutdir = "layouts"
 publishdir = "public"
 
 author = "David Weterings"
-title = "David Weterings"
+title = "Freelance senior software consultant"
 
 theme = "hugo-goa"
 

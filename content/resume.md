@@ -23,7 +23,7 @@ Under LabDigital I worked on various subprojects.
 
 Working on new e-commerce trading websites using Next.JS, Vercel, Apollo GraphQL, TypeScript, AWS, Terraform, Commercetools.
 
-Later switched to help another team using Kafka, MongoDB, C#, AWS, Terraform to develop a new service layer.
+Later switched to help another team using Kafka, MongoDB, C#, .NET Core, AWS, Terraform to develop a new service layer.
 
 #### Knives & Tools - Fullstack developer (2021)
 

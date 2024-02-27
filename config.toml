@@ -1,6 +1,6 @@
 ## Basic Configuration
 
-baseurl = "https://davidweterings.nl"
+baseurl = "https://www.davidweterings.nl"
 builddrafts = false
 canonifyurls = false
 languageCode = "en"

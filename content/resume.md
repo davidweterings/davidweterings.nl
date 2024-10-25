@@ -1,6 +1,6 @@
 ---
 title: "Resume"
-date: 2023-03-03T13:46:07+01:00
+date: 2024-08-10T00:00:00
 draft: false
 ---
 
@@ -15,15 +15,15 @@ or taking the lead.
 ## Experience
 
 
-### LabDigital - Senior Developer (2018 - current)
+### LabDigital - Senior Consultant (2018 - current)
 
 Under LabDigital I worked on various subprojects.
 
 #### Frasers Group - Lead developer (2022 - current)
 
-Working on new e-commerce trading websites using Next.JS, Vercel, Apollo GraphQL, TypeScript, AWS, Terraform, Commercetools.
+Working on replatforming a global e-commerce platform using Next.JS, Vercel, Apollo GraphQL, TypeScript, AWS, Terraform, Commercetools, Honeycomb.
 
-Later switched to help another team develop a new data service layer using Kafka, MongoDB and C#.
+Lead a squad to develop a new data service layer using Kafka, MongoDB and C#.
 
 Technologies:
 
@@ -36,6 +36,7 @@ Technologies:
 * Vercel (Next.JS)
 * Apollo GraphQL
 * TypeScript
+* OpenTelemetry (Honeycomb)
 
 #### Knives & Tools - Fullstack developer (2021)
 

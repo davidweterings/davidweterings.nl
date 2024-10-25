@@ -24,13 +24,13 @@ enableRobotsTXT = true
 author = "David Weterings"
 intro = ""
 description = """
-Freelance senior software consultant and developer. Focus on e-commerce, Terraform, Cloud and any
+Freelance senior software consultant and polyglot. Focussed on e-commerce, R&D, and cloud-native.
 programming language I wanna work with.
 
 KvK: 71557733 Btw: NL001562249B79
 """
 authorimage = "headshot.jpg"
-dateformat = "Jan 1, 2023"
+dateformat = "Jan 1, 2024"
 
 ## Site Meta Settings
 [params.meta]
@@ -47,7 +47,7 @@ email = "david@davidweterings.nl"
 
 ## Extras
 [params.extra]
-copyright = "© 2023. David Weterings. [Some Rights Reserved](https://creativecommons.org/licenses/by/3.0/)."
+copyright = "© 2024. David Weterings. [Some Rights Reserved](https://creativecommons.org/licenses/by/3.0/)."
 poweredby = false
 highlightjs = true
 socialmarkup = true

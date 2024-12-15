@@ -1,4 +1,4 @@
-# Code of Conduct
+# Code of Conduct for David Weterings
 
 ## Introduction
 This code of conduct outlines the values and standards I adhere to as a self-employed professional. It serves as a guideline for professional and ethical behavior in my working relationships with clients, partners, and other stakeholders.
@@ -37,36 +37,29 @@ This code of conduct outlines the values and standards I adhere to as a self-emp
 
 ---
 
-## 5. Compliance with Laws and Regulations
-- I comply with all applicable laws and regulations relevant to my work.
-- I work in accordance with tax laws, labor laws, and other regulations within my sector.
-
----
-
-## 6. Innovation and Development
+## 5. Innovation and Development
 - I continuously develop myself through training, courses, and other knowledge-sharing opportunities.
 - I proactively seek solutions and strive to improve my methods.
 
 ---
 
-## 7. Responsibility
+## 6. Responsibility
 - I take responsibility for my actions and decisions.
 - In case of errors or issues, I communicate openly and actively seek solutions.
 - I maintain a healthy work-life balance to ensure sustainable long-term performance.
 
 ---
 
-## 8. Anti-Fraud and Honesty
+## 7. Anti-Fraud and Honesty
 - I do not participate in fraudulent activities, such as plagiarism, misuse of confidential information, or improper invoicing.
 - I do not accept or provide unauthorized payments or benefits.
 
 ---
 
-## 9. Contact
+## 8. Contact
 If you have questions about this code of conduct or my working methods, please feel free to contact me at david@davidweterings.nl
 
 ---
 
 ## Closing Statement
-
 By adhering to this code of conduct, I aim to build trust and foster long-term collaborations with my clients and other partners.

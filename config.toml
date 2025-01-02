@@ -29,7 +29,7 @@ Freelance senior software consultant and polyglot. Focussed on e-commerce, R&D, 
 KvK: 71557733 Btw: NL001562249B79
 """
 authorimage = "headshot.jpg"
-dateformat = "Jan 1, 2024"
+dateformat = "Jan 1, 2025"
 
 ## Site Meta Settings
 [params.meta]

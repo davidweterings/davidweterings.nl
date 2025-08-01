@@ -19,6 +19,12 @@ disqusShortname = "" # Comment out to disable Disqus.
 googleAnalytics = ""
 enableRobotsTXT = true
 
+## Markup settings
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 ## Site Settings
 [params]
 author = "David Weterings"
@@ -59,4 +65,10 @@ displayrssicon = false
     identifier = "resume"
     weight = 200
     url = "/resume/"
+
+[[menu.main]]
+    name = "TIL"
+    identifier = "til"
+    weight = 300
+    url = "/til/"
 

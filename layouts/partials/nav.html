@@ -1,0 +1,21 @@
+<nav class="terminal-navbar">
+  <div class="navbar-window">
+    <div class="navbar-header">
+      <span class="navbar-title"> navbar</span>
+    </div>
+    <div class="navbar-content">
+      <div class="navbar-prompt">
+        <span class="terminal-prompt-symbol"> </span>
+        <span class="navbar-site">davidweterings</span>
+      </div>
+      
+      <div class="navbar-menu">
+        {{ with .Site.Menus.main }}
+        {{ range sort . }}
+        <a href="{{ .URL }}" class="navbar-button {{ .Identifier }}{{ if $.IsMenuCurrent "main" . }} active{{ end }}">{{ .Name }}</a>
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</nav>

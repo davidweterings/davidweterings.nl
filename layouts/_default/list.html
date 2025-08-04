@@ -1,0 +1,31 @@
+{{ partial "header.html" . }}
+
+<!-- Terminal Header -->
+<div class="terminal-header">
+  <div class="terminal-prompt">
+    <span class="terminal-user"> david@davidweterings</span><span class="terminal-path">:~</span>$ ls {{ .Title | lower }}/
+  </div>
+</div>
+
+<!-- Content List -->
+<div class="terminal-section">
+  {{ range .Pages }}
+  <div class="experience-entry">
+    <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+    <div class="experience-date">{{ .Date.Format "2006-01-02" }}</div>
+    {{ with .Summary }}
+    <p>{{ . }}</p>
+    {{ end }}
+  </div>
+  {{ end }}
+</div>
+
+<!-- Navigation Back -->
+<div class="terminal-section" style="margin-top: 2rem; border-top: 1px solid var(--ctp-surface1); padding-top: 1rem;">
+  <div class="terminal-prompt">
+    <span class="terminal-user"> david@davidweterings</span><span class="terminal-path">:~</span>$ 
+    <a href="/" style="color: var(--ctp-blue); text-decoration: none;">cd ..</a>
+  </div>
+</div>
+
+{{ partial "footer.html" . }}

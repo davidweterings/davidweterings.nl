@@ -1,0 +1,11 @@
+</div> <!-- Close terminal-container -->
+
+{{ if .Site.Params.extra.highlightjs }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+{{ end }}
+
+<script src="{{ "js/custom.js" | absURL }}"></script>
+
+</body>
+</html>

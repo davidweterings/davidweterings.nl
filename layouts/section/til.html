@@ -1,0 +1,61 @@
+{{ partial "header.html" . }}
+
+<div class="terminal-section">
+  <!-- TIL Header -->
+  <div class="section-header-large">
+    <h1> Today I Learned</h1>
+    <p class="section-description">Short notes about interesting things I've discovered</p>
+  </div>
+
+  <!-- TIL Posts Grid -->
+  <div class="til-grid">
+    {{ range .Paginator.Pages }}
+    <article class="til-card">
+      <div class="til-header">
+        <time class="til-date">{{ .Date.Format "2006-01-02" }}</time>
+      </div>
+      
+      <h2 class="til-title">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </h2>
+      
+      {{ with .Summary }}
+      <p class="til-summary">{{ . | truncate 200 }}</p>
+      {{ end }}
+      
+      <div class="til-meta">
+        <div class="til-tags">
+          {{ range .Params.tags }}
+          <span class="tech-badge">#{{ . }}</span>
+          {{ end }}
+        </div>
+        <a href="{{ .Permalink }}" class="read-more"> Read →</a>
+      </div>
+    </article>
+    {{ end }}
+    
+    {{ if eq (len .Pages) 0 }}
+    <div class="empty-state-large">
+      <pre class="ascii-art">
+╔════════════════════════════╗
+║  No TIL posts yet...       ║
+║  Check back soon!          ║
+╚════════════════════════════╝
+      </pre>
+    </div>
+    {{ end }}
+  </div>
+
+  <!-- Pagination -->
+  {{ if .Paginator.HasPrev }}
+  <div class="pagination">
+    <a href="{{ .Paginator.Prev.URL }}" class="pagination-link">← Previous</a>
+    <span class="pagination-info">Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}</span>
+    {{ if .Paginator.HasNext }}
+    <a href="{{ .Paginator.Next.URL }}" class="pagination-link">Next →</a>
+    {{ end }}
+  </div>
+  {{ end }}
+</div>
+
+{{ partial "footer.html" . }}

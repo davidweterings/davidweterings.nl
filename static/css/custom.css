@@ -1,0 +1,981 @@
+/* Custom TUI-style CSS for David Weterings Portfolio */
+
+:root {
+  /* Dark theme colors */
+  --bg-primary: #1a1b26;
+  --bg-secondary: #24283b;
+  --bg-tertiary: #2f3549;
+  --border-color: #414868;
+  --text-primary: #c0caf5;
+  --text-secondary: #9aa5ce;
+  --text-muted: #565f89;
+  --accent-blue: #7aa2f7;
+  --accent-green: #9ece6a;
+  --accent-yellow: #e0af68;
+  --accent-purple: #bb9af7;
+  --accent-red: #f7768e;
+  --accent-orange: #ff9e64;
+}
+
+/* Terminal container styling */
+.terminal-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  min-height: 100vh;
+}
+
+/* Terminal Window Header */
+.terminal-window-header {
+  background: linear-gradient(180deg, #3c3c3c 0%, #2a2a2a 100%);
+  border-bottom: 1px solid #1a1a1a;
+  padding: 0.4rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-family);
+  height: 2.5rem;
+  position: relative;
+}
+
+.terminal-window-dots {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  z-index: 1;
+}
+
+.dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.1s;
+  text-decoration: none;
+}
+
+.dot:hover {
+  transform: scale(1.1);
+  text-decoration: none;
+}
+
+.dot.red {
+  background: linear-gradient(135deg, #ff5f56 0%, #ff3b30 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.dot.yellow {
+  background: linear-gradient(135deg, #ffbd2e 0%, #ff9500 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.dot.green {
+  background: linear-gradient(135deg, #27ca3f 0%, #00ca4e 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.terminal-window-title {
+  color: #cccccc;
+  font-size: 0.8rem;
+  font-weight: 500;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  user-select: none;
+}
+
+/* Terminal Commands */
+.terminal-commands {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.terminal-command {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-primary);
+  padding: 0.3rem 0;
+  border-radius: 0.2rem;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.terminal-command:hover {
+  background: rgba(255, 255, 255, 0.05);
+  padding-left: 0.5rem;
+}
+
+.command-prompt {
+  color: var(--accent-green);
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.terminal-command.home {
+  color: var(--accent-blue);
+}
+
+.terminal-command.resume {
+  color: var(--accent-green);
+}
+
+.terminal-command.til {
+  color: var(--accent-yellow);
+}
+
+.terminal-command:hover {
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+}
+
+.terminal-command.active {
+  background: rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+}
+
+/* Terminal Window */
+.terminal-window {
+  background: var(--bg-secondary);
+  border: 1px solid #1a1a1a;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 0;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.terminal-window .terminal-header,
+.terminal-window .terminal-section,
+.terminal-window .avatar {
+  padding: 1.5rem;
+}
+
+.terminal-window .avatar {
+  padding: 1rem 1.5rem;
+}
+
+/* Terminal Output */
+.terminal-output {
+  margin-top: 0.5rem;
+  color: var(--text-secondary);
+}
+
+/* Code blocks styling for terminal theme */
+.terminal-output pre,
+.terminal-section pre,
+article pre {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  overflow-x: auto;
+}
+
+.terminal-output code,
+.terminal-section code,
+article code {
+  background: var(--bg-tertiary);
+  color: var(--accent-green);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.2rem;
+  font-family: var(--font-family);
+  font-size: 0.9rem;
+}
+
+.terminal-output pre code,
+.terminal-section pre code,
+article pre code {
+  background: none;
+  color: var(--text-primary);
+  padding: 0;
+}
+
+/* Bash/shell code blocks */
+.terminal-output pre[class*="language-bash"],
+.terminal-section pre[class*="language-bash"],
+article pre[class*="language-bash"] {
+  background: var(--bg-tertiary);
+  border-left: 4px solid var(--accent-green);
+}
+
+.terminal-output pre[class*="language-bash"] code,
+.terminal-section pre[class*="language-bash"] code,
+article pre[class*="language-bash"] code {
+  color: var(--accent-green);
+}
+
+/* JavaScript code blocks */
+.terminal-output pre[class*="language-javascript"],
+.terminal-section pre[class*="language-javascript"],
+article pre[class*="language-javascript"],
+.terminal-output pre[class*="language-js"],
+.terminal-section pre[class*="language-js"],
+article pre[class*="language-js"] {
+  background: var(--bg-tertiary);
+  border-left: 4px solid #f7ca88;
+}
+
+/* JavaScript syntax highlighting */
+.terminal-output pre[class*="language-javascript"] .token.punctuation,
+.terminal-section pre[class*="language-javascript"] .token.punctuation,
+article pre[class*="language-javascript"] .token.punctuation,
+.terminal-output pre[class*="language-js"] .token.punctuation,
+.terminal-section pre[class*="language-js"] .token.punctuation,
+article pre[class*="language-js"] .token.punctuation {
+  color: #ddd !important; /* Light color for brackets, braces, semicolons */
+}
+
+.terminal-output pre[class*="language-javascript"] .token.keyword,
+.terminal-section pre[class*="language-javascript"] .token.keyword,
+article pre[class*="language-javascript"] .token.keyword,
+.terminal-output pre[class*="language-js"] .token.keyword,
+.terminal-section pre[class*="language-js"] .token.keyword,
+article pre[class*="language-js"] .token.keyword {
+  color: #c397d8 !important; /* Purple for keywords */
+}
+
+.terminal-output pre[class*="language-javascript"] .token.string,
+.terminal-section pre[class*="language-javascript"] .token.string,
+article pre[class*="language-javascript"] .token.string,
+.terminal-output pre[class*="language-js"] .token.string,
+.terminal-section pre[class*="language-js"] .token.string,
+article pre[class*="language-js"] .token.string {
+  color: #b5bd68 !important; /* Green for strings */
+}
+
+.terminal-output pre[class*="language-javascript"] .token.function,
+.terminal-section pre[class*="language-javascript"] .token.function,
+article pre[class*="language-javascript"] .token.function,
+.terminal-output pre[class*="language-js"] .token.function,
+.terminal-section pre[class*="language-js"] .token.function,
+article pre[class*="language-js"] .token.function {
+  color: #81a2be !important; /* Blue for functions */
+}
+
+.terminal-output pre[class*="language-javascript"] .token.number,
+.terminal-section pre[class*="language-javascript"] .token.number,
+article pre[class*="language-javascript"] .token.number,
+.terminal-output pre[class*="language-js"] .token.number,
+.terminal-section pre[class*="language-js"] .token.number,
+article pre[class*="language-js"] .token.number {
+  color: #de935f !important; /* Orange for numbers */
+}
+
+/* Highlight.js base styling */
+.terminal-output .hljs,
+.terminal-section .hljs,
+article .hljs,
+.terminal-output .hljs-subst,
+.terminal-section .hljs-subst,
+article .hljs-subst {
+  color: #ddd !important; /* Light color for default text and punctuation */
+}
+
+/* Recent Updates */
+.recent-updates {
+  margin-top: 3rem;
+}
+
+.updates-header {
+  color: var(--accent-orange);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.update-window {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.update-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.update-type-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.til-badge {
+  background: var(--accent-yellow);
+  color: var(--bg-primary);
+}
+
+.update-date {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.update-title {
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+}
+
+.update-title a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.update-title a:hover {
+  color: var(--accent-blue);
+}
+
+.update-summary {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.update-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.update-tags {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tag {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.tag::before {
+  content: "#";
+}
+
+.read-more {
+  color: var(--accent-blue);
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+.read-more:hover {
+  color: var(--accent-purple);
+}
+
+.see-all-updates {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.see-all-updates a {
+  color: var(--accent-blue);
+  text-decoration: none;
+}
+
+.see-all-updates a:hover {
+  text-decoration: underline;
+}
+
+/* TIL Grid */
+.til-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.til-card {
+  background: var(--ctp-surface0);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--ctp-surface1);
+  transition: all 0.2s;
+}
+
+.til-card:hover {
+  border-color: var(--ctp-sapphire);
+}
+
+.til-header {
+  margin-bottom: 0.75rem;
+}
+
+.til-date {
+  color: var(--ctp-subtext0);
+  font-size: 0.875rem;
+}
+
+.til-date-large {
+  color: var(--ctp-subtext0);
+  font-size: 1rem;
+}
+
+.til-title {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.5rem;
+}
+
+.til-title a {
+  color: var(--ctp-text);
+  text-decoration: none;
+}
+
+.til-title a:hover {
+  color: var(--ctp-sapphire);
+}
+
+.til-summary {
+  color: var(--ctp-subtext1);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.til-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.read-more {
+  color: var(--ctp-sapphire);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* TIL Single */
+.til-single {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.til-single-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--ctp-surface1);
+}
+
+.til-meta-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.til-type-badge {
+  background: var(--ctp-sapphire);
+  color: var(--ctp-base);
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.til-single-title {
+  margin: 0 0 1rem 0;
+  font-size: 2rem;
+  color: var(--ctp-text);
+}
+
+.til-tags-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.til-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--ctp-text);
+}
+
+.til-content h2 {
+  color: var(--ctp-mauve);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.til-content h3 {
+  color: var(--ctp-peach);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.til-content pre {
+  background: var(--ctp-mantle);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.til-content code {
+  background: var(--ctp-surface0);
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.95rem;
+}
+
+.til-content pre code {
+  background: none;
+  padding: 0;
+}
+
+/* Post Navigation */
+.post-navigation {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--ctp-surface1);
+}
+
+.nav-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.nav-previous,
+.nav-next {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: var(--ctp-surface0);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.nav-next {
+  text-align: right;
+  align-items: flex-end;
+}
+
+.nav-previous:hover,
+.nav-next:hover {
+  background: var(--ctp-surface1);
+}
+
+.nav-label {
+  color: var(--ctp-subtext0);
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.nav-title {
+  color: var(--ctp-text);
+  font-weight: 500;
+}
+
+.back-link {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.terminal-link {
+  color: var(--ctp-green);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.terminal-link:hover {
+  color: var(--ctp-teal);
+}
+
+/* Empty States */
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: var(--ctp-subtext0);
+}
+
+.empty-state-large {
+  text-align: center;
+  padding: 4rem;
+}
+
+.ascii-art {
+  color: var(--ctp-subtext0);
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+/* See More Link */
+.see-more {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.see-more-link {
+  color: var(--ctp-sapphire);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.see-more-link:hover {
+  text-decoration: underline;
+}
+
+/* Prompt Symbol */
+.prompt-symbol::before {
+  content: "$";
+  color: var(--ctp-green);
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--ctp-surface1);
+}
+
+.pagination-link {
+  color: var(--ctp-sapphire);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background: var(--ctp-surface0);
+  border-radius: 0.25rem;
+  transition: all 0.2s;
+}
+
+.pagination-link:hover {
+  background: var(--ctp-surface1);
+}
+
+.pagination-info {
+  color: var(--ctp-subtext0);
+}
+
+/* Terminal header with prompt styling */
+.terminal-header {
+  border-bottom: 2px solid var(--ctp-surface1);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.terminal-prompt {
+  color: var(--ctp-green);
+  font-weight: bold;
+}
+
+.terminal-user {
+  color: var(--ctp-blue);
+}
+
+.terminal-path {
+  color: var(--ctp-yellow);
+}
+
+/* Navigation as terminal commands */
+.terminal-nav {
+  margin: 1rem 0;
+}
+
+.terminal-nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.terminal-nav li::before {
+  content: "$ ";
+  color: var(--ctp-green);
+  font-weight: bold;
+}
+
+.terminal-nav a {
+  color: var(--ctp-blue);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.terminal-nav a:hover {
+  color: var(--ctp-sapphire);
+}
+
+/* Content sections styled as terminal output */
+.terminal-section {
+  margin: 2rem 0;
+  padding: 1rem;
+  border-left: 3px solid var(--ctp-surface1);
+  background: var(--ctp-mantle);
+}
+
+.terminal-section h1,
+.terminal-section h2,
+.terminal-section h3 {
+  color: var(--ctp-mauve);
+  font-weight: bold;
+}
+
+.terminal-section h1::before {
+  content: ">> ";
+  color: var(--ctp-red);
+}
+
+.terminal-section h2::before {
+  content: "> ";
+  color: var(--ctp-peach);
+}
+
+.terminal-section h3::before {
+  content: "- ";
+  color: var(--ctp-yellow);
+}
+
+/* Social links as terminal buttons */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.social-links a {
+  padding: 0.5rem 1rem;
+  background: var(--ctp-surface0);
+  color: var(--ctp-text);
+  text-decoration: none;
+  border: 1px solid var(--ctp-surface1);
+  border-radius: 0.25rem;
+  font-family: inherit;
+}
+
+.social-links a:hover {
+  background: var(--ctp-surface1);
+  color: var(--ctp-sapphire);
+}
+
+/* Avatar styling */
+.avatar {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.avatar img {
+  border-radius: 50%;
+  border: 3px solid var(--ctp-surface1);
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Technology badges */
+.tech-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  margin: 0.25rem;
+  background: var(--ctp-surface0);
+  color: var(--ctp-text);
+  border: 1px solid var(--ctp-surface1);
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+/* Experience entries */
+.experience-entry {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: var(--ctp-surface0);
+  border-left: 4px solid var(--ctp-blue);
+}
+
+.experience-entry h4 {
+  color: var(--ctp-sapphire);
+  margin-bottom: 0.5rem;
+}
+
+.experience-date {
+  color: var(--ctp-overlay2);
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .terminal-container {
+    padding: 0.5rem;
+    padding-top: 4rem;
+  }
+  
+  .navbar-menu {
+    display: none;
+  }
+  
+  .navbar-toggle {
+    display: block;
+  }
+  
+  .mobile-menu.active {
+    display: block;
+  }
+  
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .sidebar {
+    position: static;
+    margin-top: 2rem;
+  }
+  
+  .hero-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-avatar {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .nav-links {
+    grid-template-columns: 1fr;
+  }
+  
+  .nav-next {
+    text-align: left;
+    align-items: flex-start;
+  }
+  
+  .terminal-nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .social-links {
+    flex-wrap: wrap;
+  }
+}
+
+/* Global Styles */
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Terminal Header with prompt styling */
+.terminal-header {
+  margin-bottom: 1rem;
+}
+
+.terminal-prompt {
+  color: var(--accent-green);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.terminal-user {
+  color: var(--accent-blue);
+}
+
+.terminal-path {
+  color: var(--accent-yellow);
+}
+
+/* Terminal section styling */
+.terminal-section {
+  margin: 2rem 0;
+}
+
+/* Avatar styling */
+.avatar {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.avatar img,
+.terminal-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid var(--border-color);
+  object-fit: cover;
+}
+
+/* Social links */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.social-links button {
+  padding: 0.5rem 1rem;
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.25rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.social-links button:hover {
+  background: var(--border-color);
+  color: var(--accent-blue);
+}
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-muted);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .terminal-container {
+    padding: 1rem;
+    padding-top: 5rem;
+  }
+  
+  .navbar-menu {
+    display: none;
+  }
+  
+  .terminal-navbar {
+    width: calc(100% - 1rem);
+  }
+  
+  .navbar-content {
+    padding: 0.75rem;
+  }
+  
+  .social-links {
+    flex-wrap: wrap;
+  }
+  
+  .avatar img,
+  .terminal-avatar {
+    width: 100px;
+    height: 100px;
+  }
+}

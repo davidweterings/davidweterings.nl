@@ -1,0 +1,29 @@
+{{ partial "header.html" . }}
+
+<!-- Terminal Header -->
+<div class="terminal-header">
+  <div class="terminal-prompt">
+    <span class="terminal-user"> david@davidweterings</span><span class="terminal-path">:~</span>$ cat 404.txt
+  </div>
+</div>
+
+<!-- 404 Content -->
+<div class="terminal-section">
+  <h1>Command not found: 404</h1>
+  <pre style="color: var(--ctp-red);">
+ Error: The requested page could not be found
+ Status: 404 Not Found
+ Location: {{ .Site.BaseURL }}{{ .RelPermalink }}
+  </pre>
+  
+  <p>The page you're looking for doesn't exist in this directory.</p>
+  
+  <div style="margin-top: 2rem;">
+    <div class="terminal-prompt">
+      <span class="terminal-user"> david@davidweterings</span><span class="terminal-path">:~</span>$ 
+      <a href="/" style="color: var(--ctp-blue); text-decoration: none;">cd /</a>
+    </div>
+  </div>
+</div>
+
+{{ partial "footer.html" . }}

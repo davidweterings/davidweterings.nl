@@ -1,0 +1,17 @@
+{
+  "name": "davidweterings-portfolio",
+  "version": "1.0.0",
+  "description": "David Weterings portfolio website with TUI styling",
+  "private": true,
+  "scripts": {
+    "dev": "hugo server",
+    "build": "hugo",
+    "preview": "hugo server -D"
+  },
+  "dependencies": {
+    "@webtui/css": "^0.1.4",
+    "@webtui/theme-catppuccin": "^0.0.3",
+    "@webtui/plugin-nf": "^0.1.1"
+  },
+  "packageManager": "pnpm@10.14.0"
+}

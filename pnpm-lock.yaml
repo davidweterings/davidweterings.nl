@@ -1,0 +1,38 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@webtui/css':
+        specifier: ^0.1.4
+        version: 0.1.4
+      '@webtui/plugin-nf':
+        specifier: ^0.1.1
+        version: 0.1.1
+      '@webtui/theme-catppuccin':
+        specifier: ^0.0.3
+        version: 0.0.3
+
+packages:
+
+  '@webtui/css@0.1.4':
+    resolution: {integrity: sha512-ahFXXvxSC4R/+eE1vCjJVyusJyufJgiKY0DbbX1WArzE/Ix5Wkchh9aKQXGr035a6JFCCb+oc7vzlIOcYJ019w==}
+
+  '@webtui/plugin-nf@0.1.1':
+    resolution: {integrity: sha512-ZzimzGtjV8kIng/gzPPXkgFBjJ11rCn9lYc/JnlI/9PyHfvaSDJi90k7i6oTFAa94osJL2wLGgg9l8WjMwTMSw==}
+
+  '@webtui/theme-catppuccin@0.0.3':
+    resolution: {integrity: sha512-mn3qpyIDYzPm9DoDX7Rs/Ma/3YawbAZEu6/Cemj4kTodr4eBFuEOmkkd1RtChsXGH75fZ054MIzZoVwYvA5W2g==}
+
+snapshots:
+
+  '@webtui/css@0.1.4': {}
+
+  '@webtui/plugin-nf@0.1.1': {}
+
+  '@webtui/theme-catppuccin@0.0.3': {}

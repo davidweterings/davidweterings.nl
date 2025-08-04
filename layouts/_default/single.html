@@ -1,0 +1,66 @@
+{{ partial "header.html" . }}
+
+<!-- Terminal Window -->
+<div class="terminal-window">
+  <!-- Terminal Window Header -->
+  <div class="terminal-window-header">
+    <div class="terminal-window-dots">
+      <a href="/" class="dot red" title="Close"></a>
+      <a href="/" class="dot yellow" title="Minimize"></a>
+      <a href="/" class="dot green" title="Fullscreen"></a>
+    </div>
+    <div class="terminal-window-title">{{ .Title | lower }}.md</div>
+  </div>
+  
+  <!-- Terminal Header -->
+  <div class="terminal-header">
+    <div class="terminal-prompt">
+      <span class="terminal-user"> david@davidweterings</span><span class="terminal-path">:~</span>$ 
+      <a href="/" class="terminal-command">
+        <span class="command-prompt"> </span>cd ..
+      </a>
+    </div>
+    <div class="terminal-prompt" style="margin-top: 0.5rem;">
+      <span class="terminal-user"> david@davidweterings</span><span class="terminal-path">:~</span>$ cat {{ .Title | lower }}.md
+    </div>
+  </div>
+
+  <!-- Content Section -->
+  <div class="terminal-section">
+    <div class="terminal-output">
+      <article>
+        {{ .Content }}
+      </article>
+    </div>
+  </div>
+
+  <!-- Commands Section -->
+  <div class="terminal-section">
+    <div class="terminal-prompt">
+      <span class="terminal-user"> david@davidweterings</span><span class="terminal-path">:~</span>$ ls commands/
+    </div>
+    <div class="terminal-output">
+      <div class="terminal-commands">
+        {{ with .Site.Menus.main }}
+        {{ range sort . }}
+        <a href="{{ .URL }}" class="terminal-command {{ .Identifier }}{{ if $.IsMenuCurrent "main" . }} active{{ end }}">
+          <span class="command-prompt"> </span>{{ .Name | lower }}
+        </a>
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Back -->
+  <div class="terminal-section">
+    <div class="terminal-prompt">
+      <span class="terminal-user"> david@davidweterings</span><span class="terminal-path">:~</span>$ 
+      <a href="/" class="terminal-command">
+        <span class="command-prompt"> </span>cd ..
+      </a>
+    </div>
+  </div>
+</div>
+
+{{ partial "footer.html" . }}

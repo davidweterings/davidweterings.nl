@@ -1,0 +1,135 @@
+{{ partial "header.html" . }}
+
+<!-- Terminal Window -->
+<div class="terminal-window">
+  <!-- Terminal Window Header -->
+  <div class="terminal-window-header">
+    <div class="terminal-window-dots">
+      <a href="/" class="dot red" title="Close"></a>
+      <a href="/" class="dot yellow" title="Minimize"></a>
+      <a href="/" class="dot green" title="Fullscreen"></a>
+    </div>
+    <div class="terminal-window-title">terminal</div>
+  </div>
+  
+  <!-- Terminal Header -->
+  <div class="terminal-header">
+    <div class="terminal-prompt">
+      <span class="terminal-user"> david@localhost</span><span class="terminal-path">:~</span>$ whoami
+    </div>
+    <div style="margin-top: 0.5rem;">
+      <strong>{{ .Site.Params.author }}</strong> - {{ .Site.Title }}
+    </div>
+  </div>
+
+  <!-- Avatar Section -->
+  <div class="avatar">
+    {{ with .Site.Params.authorimage }}
+    <img src="/img/{{ . }}" alt="David Weterings" class="terminal-avatar">
+    {{ end }}
+  </div>
+
+  <!-- Info Section as Terminal Output -->
+  <div class="terminal-section">
+    <div class="terminal-prompt">
+      <span class="terminal-user"> david@localhost</span><span class="terminal-path">:~</span>$ cat profile.txt
+    </div>
+    <div class="terminal-output">
+      {{ with .Site.Params.description }}
+      <p>{{ . | markdownify }}</p>
+      {{ end }}
+    </div>
+  </div>
+
+  <!-- Commands Section -->
+  <div class="terminal-section">
+    <div class="terminal-prompt">
+      <span class="terminal-user"> david@localhost</span><span class="terminal-path">:~</span>$ cat pages.txt
+    </div>
+    <div class="terminal-output">
+      <div class="terminal-commands">
+        {{ with .Site.Menus.main }}
+        {{ range sort . }}
+        <a href="{{ .URL }}" class="terminal-command {{ .Identifier }}{{ if $.IsMenuCurrent "main" . }} active{{ end }}">
+          <span class="command-prompt"> </span>{{ .Name | lower }}
+        </a>
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Social Links as Terminal Commands -->
+  <div class="terminal-section">
+    <div class="terminal-prompt">
+      <span class="terminal-user"> david@localhost</span><span class="terminal-path">:~</span>$ cat social_links.txt
+    </div>
+    <div class="terminal-output">
+      <div class="social-links">
+        {{ with .Site.Params.social.github }}
+        <a href="https://github.com/{{.}}" target="_blank" rel="noopener">
+          <button> github.com/{{ . }}</button>
+        </a>
+        {{ end }}
+        {{ with .Site.Params.social.linkedin }}
+        <a href="https://linkedin.com/in/{{.}}" target="_blank" rel="noopener">
+          <button> linkedin.com/in/{{ . }}</button>
+        </a>
+        {{ end }}
+        {{ with .Site.Params.social.email }}
+        <a href="mailto:{{.}}" rel="noopener">
+          <button> {{ . }}</button>
+        </a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Recent Updates Section -->
+<div class="recent-updates">
+  <h2 class="updates-header">Recent Updates</h2>
+  
+  {{ $tilPages := where .Site.RegularPages "Section" "til" }}
+  {{ range first 3 $tilPages }}
+  <div class="terminal-window update-window">
+    <div class="update-header">
+      <span class="update-type-badge til-badge">TIL</span>
+      <time class="update-date">{{ .Date.Format "2006-01-02" }}</time>
+    </div>
+    
+    <h3 class="update-title">
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </h3>
+    
+    {{ with .Summary }}
+    <p class="update-summary">{{ . | truncate 200 }}</p>
+    {{ end }}
+    
+    <div class="update-footer">
+      <div class="update-tags">
+        {{ range .Params.tags }}
+        <span class="tag">{{ . }}</span>
+        {{ end }}
+      </div>
+      <a href="{{ .Permalink }}" class="read-more">…</a>
+    </div>
+  </div>
+  {{ end }}
+  
+  {{ if eq (len $tilPages) 0 }}
+  <div class="terminal-window">
+    <div class="empty-state">
+      <p> No TIL posts yet. Check back soon!</p>
+    </div>
+  </div>
+  {{ end }}
+  
+  {{ if gt (len $tilPages) 3 }}
+  <div class="see-all-updates">
+    <a href="/til/">View all updates →</a>
+  </div>
+  {{ end }}
+</div>
+
+{{ partial "footer.html" . }}

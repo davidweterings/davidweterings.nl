@@ -51,14 +51,14 @@ export const withObservability = <T extends FunctionHandler>(handler: T): T => {
      return result;
     },
    );
-  } catch (error: unknown) {
-   Sentry.captureException(error);
-   throw error;
   } finally {
    await forceFlush();
   }
  };
 ```
+
+Finally, I found some code that started a trace but did a span.end() before a call that throws an exception, which also
+leads to missing parent spans if it throws that exception.
 
 # Non-compliant trace ids
 
@@ -75,10 +75,9 @@ After ingest, Honeycomb showed:
 - trace ID: `69d6fdef97f4e76f39eb6776d37e747797fcd5fd77e78f5d`
 - span ID length: 24 hex chars
 
-  This transform matches exactly:
+This transform matches exactly:
 
-  `hex(base64_decode(original_trace_id))`
+`hex(base64_decode(original_trace_id))`
 
-In the end it was correlated to when I did the Honeycomb upgrade from 2.8 to 3.2. It turns out, a regression was introduced in 3.x, but only for http/json payloads.
-After reporting the bug it was fixed very quickly: <https://github.com/honeycombio/husky/pull/355> They also suggested for performance, you should prefer http/protobuf
-anyway over http/json.
+In the end it was correlated to when I did the Honeycomb Refinery upgrade from 2.8 to 3.2. It turns out, a regression was introduced in 3.x, but only for http/json payloads.
+After reporting the bug it was fixed very quickly: <https://github.com/honeycombio/husky/pull/355> They also suggested for performance, you should prefer http/protobuf anyway over http/json.

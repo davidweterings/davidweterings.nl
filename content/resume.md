@@ -15,23 +15,20 @@ I'm comfortable working at any level of a Scrum team, whether as a developer, sy
 
 ## Experience
 
-
 ### LabDigital - Senior Consultant (2018 - current)
 
-```bash
-$ find ./labdigital -name "*.project" -exec cat {} \;
-```
-
-#### Frasers Group - Staff engineer / Lead developer (2022 - current)
+#### Frasers Group - Lead Developer / Staff engineer (2022 - 2026)
 
 ```text
- Replatforming global e-commerce platform from on premise to AWS
- Leading squad development for data service layer
- Leading platform squad
+ Replatforming Frasers global e-commerce platform from on premise to AWS, then to Azure.
+ Lead developer for initial platform migration to Typescript/NextJS/Commercetools/AWS/GraphQL.
+ Team lead C# Leading squad development to move a batch driven data platform to an event driven real time data service layer.
+ Leading platform squad, focussing on OpenTelemetry and observability.
  Cloud migration from AWS to Azure
 ```
 
 **Tech Stack:**
+
 * AWS / Azure
 * C#
 * Kafka
@@ -51,6 +48,7 @@ $ find ./labdigital -name "*.project" -exec cat {} \;
 ```
 
 **Tech Stack:**
+
 * Next.JS
 * GraphQL
 * TypeScript
@@ -77,6 +75,7 @@ Technologies:
 ```
 
 Technologies:
+
 * Kubernetes
 * Next.JS
 * GraphQL
@@ -91,6 +90,7 @@ Technologies:
 ```
 
 Technologies:
+
 * Azure (focus on Azure functions)
 * Terraform
 * Python
@@ -108,6 +108,7 @@ Technologies:
 ```
 
 Technologies:
+
 * AWS (focus on using AWS Lambda)
 * Terraform
 * Go
@@ -166,7 +167,6 @@ Technologies:
  modules, optimizing legacy code and connecting external systems.
 ```
 
-
 # Details
 
 I live in Leiderdorp, Netherlands.
@@ -174,4 +174,4 @@ I live in Leiderdorp, Netherlands.
 * Nationality: Netherlands
 * Languages: Dutch, English
 * Date of birth: 6th of December, 1987
- 
+

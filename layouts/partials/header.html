@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}" data-webtui-theme="catppuccin-mocha">
+<html lang="{{ .Site.Language.Locale }}" data-webtui-theme="catppuccin-mocha">
 <head>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,13 +20,13 @@
 {{ end -}}
 
 {{ if .Site.Params.extra.highlightjs }}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/{{ .Site.Params.extra.highlightjsstyle | default "default" }}.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.2/styles/{{ .Site.Params.extra.highlightjsstyle | default "default" }}.min.css">
 {{ end }}
 
 <!-- WebTUI CSS imports via CDN -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@webtui/css@0.1.4/index.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@webtui/theme-catppuccin@0.0.3/index.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@webtui/plugin-nf@0.1.1/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@webtui/css@0.1.10/dist/full.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@webtui/theme-catppuccin@0.0.5/dist/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@webtui/plugin-nf@0.1.2/dist/index.css">
 
 <style>
 @layer base {
@@ -52,5 +52,5 @@
 <meta name="theme-color" content="#1e1e2e">
 
 </head>
-<body lang="{{ .Site.LanguageCode }}">
+<body lang="{{ .Site.Language.Locale }}">
 <div class="terminal-container">

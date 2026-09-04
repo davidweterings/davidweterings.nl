@@ -3,7 +3,7 @@
 baseurl = "https://davidweterings.nl"
 builddrafts = false
 canonifyurls = false
-languageCode = "en"
+locale = "en"
 
 contentdir = "content"
 layoutdir = "layouts"
@@ -71,4 +71,3 @@ displayrssicon = false
     identifier = "til"
     weight = 300
     url = "/til/"
-

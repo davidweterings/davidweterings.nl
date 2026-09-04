@@ -9,9 +9,9 @@
     "preview": "hugo server -D"
   },
   "dependencies": {
-    "@webtui/css": "^0.1.4",
-    "@webtui/theme-catppuccin": "^0.0.3",
-    "@webtui/plugin-nf": "^0.1.1"
+    "@webtui/css": "^0.1.10",
+    "@webtui/theme-catppuccin": "^0.0.5",
+    "@webtui/plugin-nf": "^0.1.2"
   },
-  "packageManager": "pnpm@10.14.0"
+  "packageManager": "pnpm@12.1.0"
 }

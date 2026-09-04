@@ -3,6 +3,8 @@ title: "Resume"
 draft: false
 ---
 
+[Download my CV as PDF](/media/david-weterings-cv.pdf)
+
 # About
 
 ```text
@@ -37,6 +39,7 @@ I'm comfortable working at any level of a Scrum team, whether as a developer, sy
 * Commercetools
 * Next.JS
 * GraphQL
+* Python
 * TypeScript
 * OpenTelemetry
 
@@ -174,4 +177,3 @@ I live in Leiderdorp, Netherlands.
 * Nationality: Netherlands
 * Languages: Dutch, English
 * Date of birth: 6th of December, 1987
-
